@@ -4,14 +4,16 @@
 
 :root {
   --background: #ffffff;
+  --background-color: #ffffff;
   --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --nav-color: #ffffff;
+  --nav-hover-color: #1acc8d;
+  --nav-mobile-background-color: #ffffff;
+  --nav-dropdown-background-color: #ffffff;
+  --nav-dropdown-color: #444444;
+  --nav-dropdown-hover-color: #1acc8d;
+  --accent-color: #1acc8d;
+  --dark-background-color: #08005e;
 }
 
 body {
@@ -72,4 +74,12 @@ body {
   100% {
     transform: rotate(360deg);
   }
+}
+
+#hero:before {
+  content: "";
+  background: color-mix(in srgb, var(--dark-background-color), transparent 10%);
+  position: absolute;
+  inset: 0;
+  z-index: 2;
 }

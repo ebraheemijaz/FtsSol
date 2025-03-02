@@ -2,22 +2,13 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { menuItems } from "../data";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const menuItems = [
-    { href: "#hero", label: "Home" },
-    { href: "#about", label: "About" },
-    { href: "#features", label: "Features" },
-    { href: "#gallery", label: "Gallery" },
-    { href: "#team", label: "Team" },
-    { href: "#pricing", label: "Pricing" },
-    { href: "#contact", label: "Contact" },
-  ];
-
   return (
-    <header className="fixed top-0 left-0 w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm">
+    <header className="bg-[#08005e] fixed top-0 left-0 w-full backdrop-blur-sm z-50 shadow-sm">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center">
@@ -33,7 +24,7 @@ export default function Header() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="text-gray-700 hover:text-[#1acc8d] transition-colors duration-300"
+                  className="text-white hover:text-[#1acc8d] transition-colors duration-300"
                 >
                   {item.label}
                 </Link>
